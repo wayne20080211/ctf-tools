@@ -783,10 +783,10 @@ class Archive7z(Base):
                     for idx in range(len(streams.packinfo.packsizes)):
                         tmp = file.read(streams.packinfo.packsizes[idx])
                         fname = os.path.basename(self._file.name)
-                        print "%s:$7z$0$%s$%s$%s$%s$%s$%s$%s$%s$%s" % (fname,
+                        print("%s:$7z$0$%s$%s$%s$%s$%s$%s$%s$%s$%s" % (fname,
                             NumCyclesPower, SaltSize, binascii.hexlify(Salt),
                             ivSize, binascii.hexlify(iv), folder.crc, len(tmp),
-                            folder.unpacksizes[idx], binascii.hexlify(tmp))
+                            folder.unpacksizes[idx], binascii.hexlify(tmp)))
                         # print binascii.hexlify(tmp)
                         # result = cipher.decrypt(tmp)
                         # print folder.unpacksizes
